@@ -6,7 +6,7 @@ import 'store/main.dart';
 import 'pages/home/main.dart';
 
 void main() {
-  final store = new Store<AppState>(
+  final store = Store<AppState>(
     reducers,
     middleware: [thunkMiddleware],
     initialState: AppState.initialState(),
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new StoreProvider<AppState>(
+    return StoreProvider<AppState>(
       store: store,
       child: MaterialApp(
         theme: ThemeData.dark(),

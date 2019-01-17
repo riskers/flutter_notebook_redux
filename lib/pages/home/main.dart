@@ -27,7 +27,7 @@ class SimpleText extends StatelessWidget {
         String count = vm.state.count.toString();
         String clickCount = vm.state.clickCount.toString();
 
-        return new Text(
+        return Text(
           'count: $count, clickCount: $clickCount',
           style: Theme.of(context).textTheme.subhead,
         );
@@ -49,11 +49,11 @@ class AddButton extends StatelessWidget {
       builder: (context, vm) {
         return Padding(
           padding: const EdgeInsets.all(8.0),
-          child: new FloatingActionButton(
+          child: FloatingActionButton(
             // Attach the `callback` to the `onPressed` attribute
             onPressed: vm.onClick,
             tooltip: 'Increment',
-            child: new Icon(Icons.exposure_plus_1),
+            child: Icon(Icons.exposure_plus_1),
           ),
         );
       },
@@ -74,11 +74,11 @@ class AddAsyncButton extends StatelessWidget {
       builder: (context, vm) {
         return Padding(
           padding: const EdgeInsets.all(8.0),
-          child: new FloatingActionButton(
+          child: FloatingActionButton(
             // Attach the `callback` to the `onPressed` attribute
             onPressed: vm.onClick,
             tooltip: 'Increment',
-            child: new Icon(Icons.slow_motion_video),
+            child: Icon(Icons.slow_motion_video),
           ),
         );
       },
@@ -98,11 +98,11 @@ class DesButton extends StatelessWidget {
       builder: (context, vm) {
         return Padding(
           padding: const EdgeInsets.all(8.0),
-          child: new FloatingActionButton(
+          child: FloatingActionButton(
             // Attach the `callback` to the `onPressed` attribute
             onPressed: vm.onClick,
             tooltip: 'des',
-            child: new Icon(Icons.exposure_neg_1),
+            child: Icon(Icons.exposure_neg_1),
           ),
         );
       },
@@ -115,13 +115,13 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: new Text('Flutter Redux Demo'),
+        title: Text('Flutter Redux Demo'),
       ),
-      body: new Center(
-        child: new Column(
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            new Text(
+            Text(
               'You have pushed the button this many times:',
             ),
             SimpleText(),
