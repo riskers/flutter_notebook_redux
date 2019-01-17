@@ -4,7 +4,7 @@ import 'constant.dart';
 
 ThunkAction asyncIncrement() {
   return (Store store) async {
-    await Future.delayed(Duration(seconds: 5));
+    await Future.delayed(Duration(seconds: 3)); // 延迟 3 秒
 
     store.dispatch(INCREMENT);
   };
