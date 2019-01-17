@@ -9,10 +9,7 @@ void main() {
   final store = new Store<AppState>(
     reducers,
     middleware: [thunkMiddleware],
-    initialState: AppState(
-      count: 0,
-      clickCount: 0,
-    ),
+    initialState: AppState.initialState(),
   );
 
   runApp(MyApp(

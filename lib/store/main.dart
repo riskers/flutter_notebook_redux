@@ -16,6 +16,13 @@ class AppState {
       clickCount: clickCount ?? this.clickCount,
     );
   }
+
+  static AppState initialState() {
+    return AppState(
+      count: 0,
+      clickCount: 0,
+    );
+  }
 }
 
 final reducers = combineReducers<AppState>([
