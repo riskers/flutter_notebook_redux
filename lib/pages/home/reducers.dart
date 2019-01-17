@@ -1,5 +1,5 @@
-import '../../store/main.dart';
 import 'constant.dart';
+import '../../store/main.dart';
 
 AppState counterReducer(AppState state, dynamic action) {
   switch (action) {
